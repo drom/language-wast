@@ -1,9 +1,8 @@
 {
   "name": "language-wast",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "WebAssembly language support in Atom",
-  "keywords": [
-  ],
+  "keywords": [],
   "activationCommands": {
     "atom-workspace": "language-wast:toggle"
   },
