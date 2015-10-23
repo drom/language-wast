@@ -1,0 +1,57 @@
+'name': 'Wast'
+'scopeName': 'source.wast'
+'fileTypes': [
+  'wast'
+]
+'patterns': [
+  {
+    'begin': '(^[ \\t]+)?(?=;)'
+    'beginCaptures':
+      '1':
+        'name': 'punctuation.whitespace.comment.leading.wast'
+    'end': '(?!\\G)'
+    'patterns': [
+      {
+        'begin': ';;'
+        'beginCaptures':
+          '0':
+            'name': 'punctuation.definition.comment.wast'
+        'end': '\\n'
+        'name': 'comment.line.semicolon.wast'
+      }
+    ]
+  }
+  {
+    'match': '\\$[a-zA-Z_][a-zA-Z_0-9.]*\\b'
+    'name': 'entity.name.wast'
+  }
+  {
+    'match': '\\b(?i:switch|case|call|break|loop|if|return)\\b'
+    'name': 'keyword.control.wast'
+  }
+  {
+    'match': '\\b(?i:assert_invalid|assert_trap|assert_return_nan|assert_return|module|invoke|memory|table|export|import|global|type|result|param|local|segment|func|set_local|get_local|get_global|call_import|has_feature|label|block|block|const|failure|store|load)\\b'
+    'name': 'support.function.wast'
+  }
+  {
+    'match': '\\b((0(x|X)[0-9a-fA-F]+\\.?[0-9a-fA-F]*((p|P)(\\+|-)?[0-9]+)?)|(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))((e|E)(\\+|-)?[0-9]+)?)\\b'
+    'name': 'constant.numeric.wast'
+  }
+  {
+    'begin': '"'
+    'beginCaptures':
+      '0':
+        'name': 'punctuation.definition.string.begin.wast'
+    'end': '"'
+    'endCaptures':
+      '0':
+        'name': 'punctuation.definition.string.end.wast'
+    'name': 'string.quoted.double.wast'
+    'patterns': [
+      {
+        'match': '\\\\.'
+        'name': 'constant.character.escape.wast'
+      }
+    ]
+  }
+]

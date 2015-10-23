@@ -1,0 +1,16 @@
+{
+  "name": "language-wast",
+  "version": "0.0.1",
+  "description": "WebAssembly language support in Atom",
+  "keywords": [
+  ],
+  "activationCommands": {
+    "atom-workspace": "language-wast:toggle"
+  },
+  "repository": "https://github.com/drom/language-wast",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {}
+}
