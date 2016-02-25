@@ -26,16 +26,32 @@
     'name': 'entity.name.wast'
   }
   {
-    'match': '\\b(?i:switch|case|call|break|loop|if|return)\\b'
+    'match': '\\b(?i:switch|case|call|br|br_if|loop|if|if_else|return)\\b'
     'name': 'keyword.control.wast'
   }
   {
-    'match': '\\b(?i:assert_invalid|assert_trap|assert_return_nan|assert_return|module|invoke|memory|table|export|import|global|type|result|param|local|segment|func|set_local|get_local|get_global|call_import|has_feature|label|block|block|const|failure|store|load)\\b'
+    'match': '\\b(?i:i32|f32|i64|f64)\\b'
+    'name': 'keyword.type.wast'
+  }
+  {
+    'match': '\\b(?i:assert_invalid|assert_trap|assert_return_nan|assert_return|module|invoke|memory|memory_size|grow_memory|table|export|import|global|type|result|param|local|segment|func|set_local|get_local|get_global|call_import|call_indirect|has_feature|label|block|block|const|failure|unreachable|tableswitch|start|select|nop)\\b'
     'name': 'support.function.wast'
   }
   {
-    'match': '\\b((0(x|X)[0-9a-fA-F]+\\.?[0-9a-fA-F]*((p|P)(\\+|-)?[0-9]+)?)|(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))((e|E)(\\+|-)?[0-9]+)?)\\b'
+    'match': '\\b(?i:add|sub|mul|div_s|div_u|rem_s|rem_u|and|or|xor|shl|shr_u|shr_s|div|copysign|min|max|clz|ctz|popcnt|neg|abs|ceil|floor|trunc|nearest|sqrt|eq|ne|lt_s|lt_u|le_s|le_u|gt_s|gt_u|ge_s|ge_u|lt|le|gt|ge)\\b'
+    'name': 'support.function.wast'
+  }
+  {
+    'match': '\\b(?i:store|load)((8|16|32)(\\_u|\\_s)?)?\\b'
+    'name': 'support.function.wast'
+  }
+  {
+    'match': '\\b(((\\+|-)?0(x|X)[0-9a-fA-F]+\\.?[0-9a-fA-F]*((p|P)(\\+|-)?[0-9]+)?)|(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))((e|E)(\\+|-)?[0-9]+)?)\\b'
     'name': 'constant.numeric.wast'
+  }
+  {
+    'match': '\\b(\\+|-)?(?i:infinity|nan)\\b'
+    'name': 'constant.special.numeric.wast'
   }
   {
     'begin': '"'
