@@ -2,6 +2,7 @@
 'scopeName': 'source.wast'
 'fileTypes': [
   'wast'
+  'wat'
 ]
 'patterns': [
   {
