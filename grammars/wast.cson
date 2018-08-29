@@ -35,7 +35,7 @@
     'name': 'keyword.type.wast'
   }
   {
-    'match': '\\b(?i:assert_invalid|assert_trap|assert_return_nan|assert_return|module|invoke|memory|memory_size|grow_memory|table|export|import|global|type|result|param|mut|local|segment|func|set_local|get_local|set_global|get_global|call_import|call_indirect|has_feature|label|block|end|const|failure|unreachable|tableswitch|start|select|nop)\\b'
+    'match': '\\b(?i:assert_invalid|assert_trap|assert_return_nan|assert_return|module|invoke|memory|memory_size|grow_memory|table|export|import|global|type|result|param|mut|local|segment|func|set_local|get_local|tee_local|set_global|get_global|call_import|call_indirect|has_feature|label|block|end|const|failure|unreachable|tableswitch|start|select|nop)\\b'
     'name': 'support.function.wast'
   }
   {
